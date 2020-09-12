@@ -1,0 +1,19 @@
+{% extends "bootstrap_base.html" %}
+
+{% block app_content %}
+    <div class="row">
+        <div class="col-xs-1 col-md-2 col-lg-3"></div>
+            <div class="col-xs-10 col-md-8 col-lg-6"> 
+                <h2 style = "text-align: center; padding: 10pt;">Main Menu</h2>
+                <p style  = "text-align: center; padding: 10pt;">Put your content here.</p>
+            </div>
+        <div class="col-xs-1 col-md-2 col-lg-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1 col-md-2 col-lg-3"></div>
+            <div class="col-xs-10 col-md-8 col-lg-6" style="text-align: center;">
+                <a href="https://webexapis.com/v1/authorize?client_id=C2031622ccdc5630a6b9349cbf464738ef433192609607423dc30c58ce0fe3406&response_type=code&redirect_uri=http%3A%2F%2F01a594d12df2.ngrok.io%2Foauth&scope=spark%3Akms%20spark%3Aall%20meeting%3Aschedules_read%20meeting%3Aschedules_write&state=set_state_here" class="btn btn-secondary btn-round-lg w-25" role="button">Login</a>
+            </div>
+        <div class="col-xs-1 col-md-2 col-lg-3"></div>
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+Bootstrap-Flask==1.1.0
+click==7.1.2
+dnspython==2.0.0
+Flask==1.1.1
+Flask-PyMongo==2.3.0
+Flask-WTF==0.14.2
+gevent==1.4.0
+greenlet==0.4.16
+gunicorn==19.9.0
+itsdangerous==1.1.0
+Jinja2==2.10.3
+MarkupSafe==1.1.1
+python-dotenv==0.10.3
+urllib3==1.25.6
+Werkzeug==0.16.0
+WTForms==2.2.1

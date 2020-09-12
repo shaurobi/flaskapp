@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block styles %}
+    <!-- Bootstrap CSS -->
+    {{ bootstrap.load_css() }}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    {% endblock %}
+
+    <title>My Web App</title>
+    {% endblock %}
+  </head>
+  <body>
+    <div class="container-fluid">
+      {% block navbar %}
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="d-flex flex-grow-1">
+          <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+          <a class="navbar-brand" href="#">
+            <span>
+              <img src="{{ url_for('static', filename='logo.png') }}" alt="default logo" style="width: 150px; margin-right: 10px;">
+            </span>
+          </a>
+          <div class="w-100 text-right">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+        <!-- Links -->
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+          <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('index') }}" title="Home"><img src="{{ url_for('static', filename='home_32_w@3x.png') }}" width="25" alt="Home"></a>
+            </li>
+          </ul>
+        </div>          
+      </nav>
+    {% endblock %}
+    </div>
+
+    <!-- Your page content -->
+    <div class="container-fluid">
+      {% include "flash.html" %}
+      {% block content %}
+
+      {# application content needs to be provided in the app_content block #}
+      {% block app_content %}{% endblock %}
+
+    {% endblock %}
+    </div>
+
+    {% block scripts %}
+      <!-- Optional JavaScript -->
+      {{ bootstrap.load_js() }}
+      <script src="https://kit.fontawesome.com/1ee1c8ba11.js" crossorigin="anonymous"></script>
+    {% endblock %}
+  </body>
+</html>
