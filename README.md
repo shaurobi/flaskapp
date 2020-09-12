@@ -1,5 +1,5 @@
-# YourApp
+# Basic Flask App
 
-This app can be used as a template for building a basic flask app.
+This is a basic Flask app, usable for an OAuth flow demonstration in conjunction with Webex
 
-NOTE: Rename template.env to .env if you want to load your environment variables in this file.
+original credit goes to Brendon Pinniger for the code foundation
